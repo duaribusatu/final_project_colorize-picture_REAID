@@ -11,7 +11,7 @@ This project demonstrates the application of all the Python skills learned throu
 3. Streamlit for UI
 4. Interactive elements: file upload, preview, dynamic result, download
 
-# Key Features
+### Key Features
 1. Upload black and white photos (JPG, PNG)
 2. Automatic colorization using pre-trained AI model (SIGGRAPH17)
 3. Download the colorized image
@@ -21,11 +21,11 @@ This project demonstrates the application of all the Python skills learned throu
 
 ![image](https://github.com/user-attachments/assets/ab358470-9b07-4eb6-8a37-3864c32c5ed8)
 
-**Clone the repository; install dependencies**
+**Clone the repository**
 
 ```
-git clone https://github.com/richzhang/colorization.git
-cd your-repo-name
+git clone https://github.com/duaribusatu/final_project_colorize-picture_REAID.git
+cd final_project_colorize-picture_REAID
 ```
 
 **Create and activate virtual environment**
@@ -45,11 +45,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-```
-python demo_release.py -i imgs/ansel_adams3.jpg
-```
-
-# App Preview
+### App Preview
 1. Upload ur image
 ![image](https://github.com/user-attachments/assets/b81432d4-3f20-4d78-83dc-42843b119f7a)
 
