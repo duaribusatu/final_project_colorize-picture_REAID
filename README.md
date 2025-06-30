@@ -2,7 +2,8 @@
 ## <b>Photo Colorization</b>
 
 ### Project Overview
-+ Black & White Photo Colorization using AI!
+Black & White Photo Colorization using AI!
+
 Old black-and-white photos often carry valuable memories, but they can feel dull due to the lack of color. This project brings those photos to life by automatically colorizing them using artificial intelligence (AI). The model used is SIGGRAPH 2017 Colorization Model by Richard Zhang et al., integrated into an interactive Streamlit app.
 
 This project demonstrates the application of all the Python skills learned throughout the course:
