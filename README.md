@@ -1,60 +1,55 @@
-<!--<h3><b>Colorful Image Colorization</b></h3>-->
-## <b>Colorful Image Colorization</b> [[Project Page]](http://richzhang.github.io/colorization/) <br>
-[Richard Zhang](https://richzhang.github.io/), [Phillip Isola](http://web.mit.edu/phillipi/), [Alexei A. Efros](http://www.eecs.berkeley.edu/~efros/). In [ECCV, 2016](http://arxiv.org/pdf/1603.08511.pdf).
+<!--<h3><b>Black & White Photo Colorization using AI</b></h3>-->
+## <b>Photo Colorization</b> [[Project Page]](http://) <br>
 
-**+ automatic colorization functionality for Real-Time User-Guided Image Colorization with Learned Deep Priors, SIGGRAPH 2017!**
+# Project Overview
+Old black-and-white photos often carry valuable memories, but they can feel dull due to the lack of color. This project brings those photos to life by automatically colorizing them using artificial intelligence (AI). The model used is SIGGRAPH 2017 Colorization Model by Richard Zhang et al., integrated into an interactive Streamlit app.
 
-**[Sept20 Update]** Since it has been 3-4 years, I converted this repo to support minimal test-time usage in PyTorch. I also added our SIGGRAPH 2017 (it's an interactive method but can also do automatic). See the [Caffe branch](https://github.com/richzhang/colorization/tree/caffe) for the original release.
+This project demonstrates the application of all the Python skills learned throughout the course:
+1. Modular programming & custom functions
+2. Use of external libraries like torch, PIL, skimage
+3. Streamlit for UI
+4. Interactive elements: file upload, preview, dynamic result, download
 
-![Teaser Image](http://richzhang.github.io/colorization/resources/images/teaser4.jpg)
+# Key Features
+1. Upload black and white photos (JPG, PNG)
+2. Automatic colorization using pre-trained AI model (SIGGRAPH17)
+3. Download the colorized image
+4. Side-by-side Before & After comparison
+5. Uses pre-trained model weights stored locally
+6. Modular structure: siggraph17.py, base_color.py, utils.py, app.py
+
+![image](https://github.com/user-attachments/assets/ab358470-9b07-4eb6-8a37-3864c32c5ed8)
 
 **Clone the repository; install dependencies**
 
 ```
 git clone https://github.com/richzhang/colorization.git
-pip install requirements.txt
+cd your-repo-name
+
+**Create and activate virtual environment**
+```
+python -m venv venv
+source venv/bin/activate       # macOS/Linux
+venv\Scripts\activate          # Windows
 ```
 
-**Colorize!** This script will colorize an image. The results should match the images in the `imgs_out` folder.
+**Install dependencies**
+```
+pip install -r requirements.txt
+```
+
+**Run the app**
+```
+streamlit run app.py
+```
 
 ```
 python demo_release.py -i imgs/ansel_adams3.jpg
 ```
 
-**Model loading in Python** The following loads pretrained colorizers. See [demo_release.py](demo_release.py) for some details on how to run the model. There are some pre and post-processing steps: convert to Lab space, resize to 256x256, colorize, and concatenate to the original full resolution, and convert to RGB.
+# App Preview
+1. Upload ur image
+![image](https://github.com/user-attachments/assets/b81432d4-3f20-4d78-83dc-42843b119f7a)
 
-```python
-import colorizers
-colorizer_eccv16 = colorizers.eccv16().eval()
-colorizer_siggraph17 = colorizers.siggraph17().eval()
-```
-
-### Original implementation (Caffe branch)
-
-The original implementation contained train and testing, our network and AlexNet (for representation learning tests), as well as representation learning tests. It is in Caffe and is no longer supported. Please see the [caffe](https://github.com/richzhang/colorization/tree/caffe) branch for it.
-
-### Citation ###
-
-If you find these models useful for your resesarch, please cite with these bibtexs.
-
-```
-@inproceedings{zhang2016colorful,
-  title={Colorful Image Colorization},
-  author={Zhang, Richard and Isola, Phillip and Efros, Alexei A},
-  booktitle={ECCV},
-  year={2016}
-}
-
-@article{zhang2017real,
-  title={Real-Time User-Guided Image Colorization with Learned Deep Priors},
-  author={Zhang, Richard and Zhu, Jun-Yan and Isola, Phillip and Geng, Xinyang and Lin, Angela S and Yu, Tianhe and Efros, Alexei A},
-  journal={ACM Transactions on Graphics (TOG)},
-  volume={9},
-  number={4},
-  year={2017},
-  publisher={ACM}
-}
-```
-
-### Misc ###
-Contact Richard Zhang at rich.zhang at eecs.berkeley.edu for any questions or comments.
+2. Colorize image
+![image](https://github.com/user-attachments/assets/abe43247-4523-49ca-b73f-304416c9d985)
